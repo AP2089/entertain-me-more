@@ -1,0 +1,43 @@
+// font
+$font-global: 'Segoe UI', sans-serif;
+$font-path: '../fonts';
+
+// color
+$color-global: #2c2c2c;
+$color-factory: #efefef;
+$color-primary: #1c91ed;
+$color-secondary: #d8d8d8;
+$color-extra: #b9b9b9;
+$color-service: #f2a723;
+$color-danger: #c34c4c;
+$color-basic: #999999;
+$color-info: #4e4e4e;
+$color-general: #d3d3d3;
+$color-base: #b7b7b7;
+$color-main: #dcdcdc;
+$color-additional: #9b9b9b;
+$color-normal: #979797;
+$color-success: #58b486;
+$color-other: #f6f6f6;
+$color-special: #aeaead;
+
+// screen
+$viewport-xlg: 1600px;
+$viewport-pre-xlg: $viewport-xlg - 1px;
+$viewport-post-xlg: $viewport-xlg + 1px;
+
+$viewport-lg: 1300px;
+$viewport-pre-lg: $viewport-lg - 1px;
+$viewport-post-lg: $viewport-lg + 1px;
+
+$viewport-md: 1100px;
+$viewport-pre-md: $viewport-md - 1px;
+$viewport-post-md: $viewport-md + 1px;
+
+$viewport-sm: 768px;
+$viewport-pre-sm: $viewport-sm - 1px;
+$viewport-post-sm: $viewport-sm + 1px;
+
+$viewport-xs: 480px;
+$viewport-pre-xs: $viewport-xs - 1px;
+$viewport-post-xs: $viewport-xs + 1px;

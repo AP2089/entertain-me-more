@@ -1,0 +1,220 @@
+.subscriptions {
+  padding-top: 15px;
+  border-top: 1px solid $color-general;
+
+  &__list {
+    display: grid;
+    gap: 4px 5px;
+
+    @include media('min', $viewport-post-lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include media(null, $viewport-post-sm, $viewport-lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media('max', $viewport-sm) {
+      grid-template-columns: 1fr;
+    }
+
+    @include media('min', $viewport-post-md) {
+      margin-bottom: 126px;
+    }
+    
+    @include media('max', $viewport-md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    display: grid; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 56px; 
+    grid-template-rows: auto auto; 
+    gap: 12px; 
+    grid-template-areas: 
+      "image toggle"
+      "caption caption"; 
+    align-content: start; 
+    justify-items: start; 
+    align-items: start;
+    background-color: transparent;
+    border: 1px solid $color-main;
+    box-shadow: 0px 0px 9px 0px transparent;
+    transition: background-color .5s ease 0s, border-color .5s ease 0s, box-shadow .5s ease 0s;
+
+    @include media('min', $viewport-post-md) {
+      padding: 22px 27px 22px 35px;
+    }
+
+    @include media(null, $viewport-post-xs, $viewport-md) {
+      padding: 20px;
+    }
+
+    @include media('max', $viewport-xs) {
+      padding: 15px;
+    }
+    
+    &:hover {
+      border-color: #ffffff;
+      background-color: $color-other;
+      box-shadow: 0px 0px 9px 0px rgba(88, 180, 134, 0.2);
+    }
+  }
+
+  &__picture {
+    grid-area: image;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  &__toggle {
+    grid-area: toggle;
+    margin-top: 6px;
+  }
+
+  &__caption {
+    font-size: 14px;
+    line-height: 1.25;
+    grid-area: caption;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 1px solid $color-general;
+
+    @include media('min', $viewport-post-sm) {
+      padding-top: 21px;
+    }
+    
+    @include media('max', $viewport-sm) {
+      flex-direction: column;
+      padding-top: 15px;
+    }
+  }
+
+  &__control-btn {
+    @include media('min', $viewport-post-sm) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      &.btn-base {
+        min-width: 278px;
+      }
+  
+      &.btn-primary {
+        min-width: 325px;
+      }
+    }
+    
+    @include media('max', $viewport-sm) {
+      width: 100%;
+      max-width: 320px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__modal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    @include media('min', $viewport-post-md) {
+      padding: 60px 15px;
+      border: 10px solid $color-secondary;
+    }
+    
+    @include media('max', $viewport-md) {
+      padding: 15px;
+      border: 3px solid $color-secondary;
+    }
+
+    &-heading {
+      line-height: 1;
+      color: #000000;
+
+      @include media('min', $viewport-post-md) {
+        font-size: 58px;
+      }
+
+      @include media(null, $viewport-post-xs, $viewport-md) {
+        font-size: 35px;
+      }
+
+      @include media('max', $viewport-xs) {
+        font-size: 25px;
+      }
+    }
+
+    &-caption {
+      font-size: 14px;
+
+      @include media('min', $viewport-post-md) {
+        margin-bottom: 20px;
+      }
+      
+      @include media('max', $viewport-md) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-counter {
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 10px;
+
+      @include media('min', $viewport-post-md) {
+        font-size: 36px;
+      }
+
+      @include media(null, $viewport-post-xs, $viewport-md) {
+        font-size: 28px;
+      }
+
+      @include media('max', $viewport-xs) {
+        font-size: 20px;
+      }
+
+      &_add {
+        color: $color-service;
+      }
+
+      &_remove {
+        color: $color-danger;
+      }
+    }
+
+    &-subcaption {
+      font-size: 14px;
+      color: $color-special;
+
+      @include media('min', $viewport-post-md) {
+        margin-bottom: 30px;
+      }
+      
+      @include media('max', $viewport-md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      max-width: 278px;
+    }
+  }
+}

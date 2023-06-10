@@ -1,0 +1,10 @@
+{% set attr = data.attr | attr %}
+
+<div class="modal" {{ attr }}>
+  <div class="modal__main">
+    <div class="modal__bg js-modal-hide"></div>
+    <div class="modal__wrap">
+      {% include "src/" + data.include %}
+    </div>
+  </div>
+</div>

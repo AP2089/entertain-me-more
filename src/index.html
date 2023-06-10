@@ -1,0 +1,10 @@
+{% extends 'src/layouts/layout-base.html' %}
+
+{% set title = 'Home' %}
+
+{% block content %}
+  <h1 class="heading heading_space">Ok, let’s change your preferences</h1>
+  <div class="caption caption_space">To unsubscribe, please uncheck the appropriate box(es).</div>
+  
+  {{ component('subscriptions') }}
+{% endblock %}

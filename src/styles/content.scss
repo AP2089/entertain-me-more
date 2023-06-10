@@ -1,0 +1,25 @@
+.heading {
+  &_space {
+    @include media('min', $viewport-post-md) {
+      padding: 0 4px;
+    }
+  }
+}
+
+.caption {
+  font-size: 16px;
+
+  @include media('min', $viewport-post-md) {
+    margin-bottom: 26px;
+  }
+  
+  @include media('max', $viewport-md) {
+    margin-bottom: 20px;
+  }
+
+  &_space {
+    @include media('min', $viewport-post-md) {
+      padding: 0 6px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.logo {
+  display: flex;
+  align-items: flex-start;
+
+  @include media('min', $viewport-post-md) {
+    justify-content: flex-start;
+    margin: 0 0 76px -3px;
+  }
+
+  @include media(null, $viewport-post-xs, $viewport-md) {
+    justify-content: flex-start;
+    margin-right: 15px;
+  }
+
+  @include media('max', $viewport-xs) {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity .5s ease 0s;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.5;
+    }
+  }
+
+  &__picture {
+    display: block;
+  }
+
+  &__img {
+    display: block;
+
+    @include media('max', $viewport-xs) {
+      width: 100px;
+      height: 90px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<div class="subscriptions" id="subscriptions">
+  <form class="subscriptions__form">
+    <div class="subscriptions__list js-subscriptions-list"></div>
+
+    <div class="subscriptions__control">
+      <button type="button" class="subscriptions__control-btn btn-base js-modal" data-target="modal-subscriptions-subscribed">Save changes</button>
+      <button type="button" class="subscriptions__control-btn btn-primary js-modal" data-target="modal-subscriptions-unsubscribed">Unsubscribe from all of the above. It’s over</button>
+    </div>
+
+    {{ ui('modal', {
+        include: 'components/subscriptions/subscriptions-modal-subscribed.html',
+        attr: { id: 'modal-subscriptions-subscribed' }
+    }) }}
+
+    {{ ui('modal', {
+        include: 'components/subscriptions/subscriptions-modal-unsubscribed.html',
+        attr: { id: 'modal-subscriptions-unsubscribed' }
+    }) }}
+  </form>
+</div>

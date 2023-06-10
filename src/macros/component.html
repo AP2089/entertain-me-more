@@ -1,0 +1,23 @@
+{% from 'src/macros/ui.html' import ui %}
+
+{% macro component(name, params) %}
+  {% if name %}
+    {% set paramsType = params | typeof %}
+    
+    {% set data %}
+      {% if paramsType === 'string' %}
+        {% include "src/components/" + name + "/" + params + ".json" ignore missing %}
+      {% else %}
+        {% include "src/components/" + name + "/" + name + ".json" ignore missing %}
+      {% endif %}
+    {% endset %}
+
+    {% set data = data | json %}
+
+    {% if paramsType === 'object' %}
+      {% set data = data | merge(params) %}
+    {% endif %}
+
+    {% include "src/components/" + name + "/" + name + ".html" %}
+  {% endif %}
+{% endmacro %}

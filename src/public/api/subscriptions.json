@@ -1,0 +1,56 @@
+[
+  {
+    "site": "trainyrbrain",
+    "subscribed": true,
+    "caption": "True/False Quiz. Keep your brain fit!",
+    "image": {
+      "webp": "images/01.webp",
+      "any": "images/01.png"
+    }
+  },
+  {
+    "site": "ynquiz",
+    "subscribed": true,
+    "caption": "Fun photo Quiz. Match words and names to pictures of objects and people.",
+    "image": {
+      "webp": "images/02.webp",
+      "any": "images/02.png"
+    }
+  },
+  {
+    "site": "finditquiz",
+    "subscribed": false,
+    "caption": "Celebrity Photo Quiz. Guess the star by a photo!",
+    "image": {
+      "webp": "images/03.webp",
+      "any": "images/03.png"
+    }
+  },
+  {
+    "site": "moviequizonline",
+    "subscribed": true,
+    "caption": "Easy Yes/No Quiz. Distinguish facts from fiction!",
+    "image": {
+      "webp": "images/04.webp",
+      "any": "images/04.png"
+    }
+  },
+  {
+    "site": "findsuperstar",
+    "subscribed": false,
+    "caption": "Movie Photo Quiz. Guess the film by a still!",
+    "image": {
+      "webp": "images/05.webp",
+      "any": "images/05.png"
+    }
+  },
+  {
+    "site": "whatcountry",
+    "subscribed": false,
+    "caption": "Geography quiz. Guess the country by the photo (fact/description)",
+    "image": {
+      "webp": "images/06.webp",
+      "any": "images/06.png"
+    }
+  }
+]

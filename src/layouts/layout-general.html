@@ -1,0 +1,19 @@
+{% from 'src/macros/component.html' import component %}
+{% from 'src/macros/ui.html' import ui %}
+
+{%
+  set head = {
+    title: title
+  }
+%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ component('head', head) }}
+  </head>
+  <body>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

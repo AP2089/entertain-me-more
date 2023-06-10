@@ -1,0 +1,82 @@
+.subscribe-panel {
+  margin-bottom: 15px;
+
+  &__heading {
+    font-size: 16px;
+    line-height: 1.29;
+
+    @include media('min', $viewport-post-md) {
+      margin-bottom: 50px;
+    }
+    
+    @include media('max', $viewport-md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__email {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 11px;
+  }
+
+  &__title {
+    font-size: 11px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $color-extra;
+    margin-bottom: 2px;
+  }
+
+  &__progress {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include media('min', $viewport-post-md) {
+      margin-bottom: 20px;
+    }
+    
+    @include media('max', $viewport-md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__progress-bar {
+    width: 136px;
+    border-radius: 10px;
+    height: 13px;
+    background-color: $color-global;
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+
+  &__progress-scale {
+    width: 100%;
+    height: 100%;
+    background-color: $color-service;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    transform: translateX(0);
+    transition: transform .5s ease 0s;
+  }
+
+  &__progress-counter {
+    font-size: 18px;
+    line-height: 1;
+    color: $color-service;
+  }
+
+  &__caption {
+    font-size: 14px;
+    color: $color-basic;
+    line-height: 1.2;
+  }
+
+  &__selected {
+    color: $color-primary;
+  }
+}

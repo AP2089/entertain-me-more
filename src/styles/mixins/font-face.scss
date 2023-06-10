@@ -1,0 +1,18 @@
+@mixin font-face($family, $props, $display: swap) {
+  $path: #{$font-path}/#{to-lower-case(str-replace($family, ' ', '-'))};
+  
+  @each $src, $weight, $style in $props {
+    @font-face {
+      font-family: $family;
+      font-display: $display;
+      src: url('#{$path}/#{$src}.eot');
+      src: url('#{$path}/#{$src}.eot?#iefix') format('embedded-opentype'),
+            url('#{$path}/#{$src}.woff2') format('woff2'),
+            url('#{$path}/#{$src}.woff') format('woff'),
+            url('#{$path}/#{$src}.ttf') format('truetype'),
+            url('#{$path}/#{$src}.svg##{$src}') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+    }
+  }
+}

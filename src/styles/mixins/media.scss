@@ -1,0 +1,15 @@
+@mixin media($property, $viewport1, $viewport2: null) {
+  @if $property == 'min' {
+    @media (min-width: $viewport1) {
+      @content;
+    }
+  } @else if $property == 'max' {
+    @media (max-width: $viewport1) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $viewport1) and (max-width: $viewport2) {
+      @content;
+    }
+  }
+}
